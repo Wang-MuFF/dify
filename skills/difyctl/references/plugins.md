@@ -2,7 +2,7 @@
 
 ## Find tools, models and knowledge bases
 
-1. `difyctl get tool --query <service>` lists tools the workspace can use: built-in and plugin tools, workflows published as tools, API tools and MCP tools. Each row has `configured` and a ready `node_data`.
+1. `difyctl get tool --query <service>` lists tools the workspace can use: built-in and plugin tools, workflows published as tools, API tools and MCP tools. Each row has `configured` and the tool's `parameters`.
 2. `difyctl get model --model-type llm` lists models across providers (`--provider <id>` for one). Use one whose `status` is `active`. Paste the row's `node_model` as the LLM node's `model` block; don't build it by hand.
 3. For knowledge bases: `difyctl get knowledge_base --query <words>`. A knowledge-retrieval node needs a row's `node_data`.
 4. Nothing fits: `difyctl get marketplace plugin --query <service> --category tool` (or `--category model`).
